@@ -3,7 +3,7 @@ export default class Stack {
 		this.stack = [];
 	};
 
-	pop(data){
+	push(data){
 		this.stack.push(data);
 	}
 
