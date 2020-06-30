@@ -19,6 +19,9 @@ it("Confirm pushes", () => {
 
 it("Confirm pops", () => {
 	const stack = new Stack();
+	
+	// Empty Pop
+	expect(stack.pop()).toStrictEqual(false);
 
 	stack.push(1);
 	stack.push("two");
@@ -28,7 +31,6 @@ it("Confirm pops", () => {
 	// Second Pop
 	expect(stack.pop()).toStrictEqual(1);
 
-	expect(stack.pop()).toStrictEqual(false);
 });
 
 it("Confirm peep", () => {
@@ -42,4 +44,5 @@ it("Confirm peep", () => {
 	//Then pop
 	stack.pop();
 	expect(stack.peep()).not.toStrictEqual("two");
+	expect(stack.peep()).toStrictEqual(1);
 });

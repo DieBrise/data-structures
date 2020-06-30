@@ -8,7 +8,6 @@ export default class Stack {
 	}
 
 	peep(){
-		// console.log(this.stack[this.stack.length-1]);
 		return this.stack[this.stack.length-1];
 	}
 
